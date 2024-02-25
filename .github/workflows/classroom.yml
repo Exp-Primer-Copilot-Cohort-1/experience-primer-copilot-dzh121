@@ -33,7 +33,7 @@ jobs:
         command: "[ $(cat .github/steps/-step.txt) -ge 1 ] || [ $(cat .github/steps/-step.txt)
           = X ]"
         timeout: 10
-        max-score: 1
+        max-score: 0
     - name: Step 2 javascript
       id: step-2-javascript
       uses: education/autograding-command-grader@v1
@@ -53,7 +53,7 @@ jobs:
         command: "[ $(cat .github/steps/-step.txt) -ge 3 ] || [ $(cat .github/steps/-step.txt)
           = X ]"
         timeout: 10
-        max-score: 1
+        max-score: 0
     - name: Step 4 Copilot comment
       id: step-4-copilot-comment
       uses: education/autograding-command-grader@v1
@@ -63,7 +63,7 @@ jobs:
         command: "[ $(cat .github/steps/-step.txt) -ge 4 ] || [ $(cat .github/steps/-step.txt)
           = X ]"
         timeout: 10
-        max-score: 1
+        max-score: 0
     - name: Step 5 finish
       id: step-5-finish
       uses: education/autograding-command-grader@v1
@@ -73,7 +73,7 @@ jobs:
         command: "[ $(cat .github/steps/-step.txt) -ge 5 ] || [ $(cat .github/steps/-step.txt)
           = X ]"
         timeout: 10
-        max-score: 1
+        max-score: 0
     - name: Autograding Reporter
       uses: education/autograding-grading-reporter@v1
       env:
